@@ -2,7 +2,7 @@
 
 ## Whiteboard Process
 
-![Whiteboard](./w2.PNG)
+![Whiteboard](./b2.PNG)
 
 
 ## Approach & Efficiency
