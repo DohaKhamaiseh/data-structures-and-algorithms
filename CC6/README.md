@@ -50,4 +50,4 @@
 5.	insert after :  value =5   new_value = 0    list = { 1 } -> { 2 } -> { 3 } -> { 4 } -> { 5 } -> { 0 } -> X
 
 
-[Pull Request Link]()
+[Pull Request Link](https://github.com/DohaKhamaiseh/data-structures-and-algorithms/pull/6)
