@@ -70,4 +70,4 @@
 7.	insert after :  value =6   new_value = 0    "The value 6 not in the list"
 
 
-[Pull Request Link](https://github.com/DohaKhamaiseh/data-structures-and-algorithms/pull/6)
+[Pull Request Link](https://github.com/DohaKhamaiseh/data-structures-and-algorithms/pull/7)
