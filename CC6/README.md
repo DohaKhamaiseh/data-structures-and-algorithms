@@ -1,6 +1,24 @@
 # Linked List Insertions
 
+## Whiteboard Process
+### Method_1
+ ![Method_1](./CC6_1.PNG)
 
+ **in case it is not clear:**
+ [CC6_1 In Miro](https://miro.com/app/board/uXjVMSGNd2I=/)
+
+### Method_2
+![Method_2](./CC6_2.PNG)
+
+**in case it is not clear:**
+[CC6_2 In Miro](https://miro.com/app/board/uXjVMSEM90s=/)
+
+### Method_3
+![Method_3](./CC6_3.PNG)
+
+**in case it is not clear:**
+[CC6_3 In Miro](https://miro.com/app/board/uXjVMSNcTAw=/)
+ 
 ## Approach & Efficiency
 *The Node class is used to create individual nodes of the linked list, where each node contains a value and a reference to the next node.*
 
@@ -48,6 +66,8 @@
 3.	insert after :  value =3   new_value = 0    list = { 1 } -> { 2 } -> { 3 } -> { 0 } -> { 4 } -> { 5 } -> X
 4.	insert before : value =1   new_value = 0    list = { 0 } -> { 1 } -> { 2 } -> { 3 } -> { 4 } -> { 5 } -> X
 5.	insert after :  value =5   new_value = 0    list = { 1 } -> { 2 } -> { 3 } -> { 4 } -> { 5 } -> { 0 } -> X
+6.	insert before :  value =6   new_value = 0   "The value 6 not in the list"
+7.	insert after :  value =6   new_value = 0    "The value 6 not in the list"
 
 
 [Pull Request Link](https://github.com/DohaKhamaiseh/data-structures-and-algorithms/pull/6)
