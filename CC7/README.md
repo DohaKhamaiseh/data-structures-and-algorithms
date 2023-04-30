@@ -9,24 +9,12 @@
 *The Linked_List class is used to create and manipulate the linked list. It has one new method:*
 
 **kth_from_end(self, k)**: This method will return the node's value that is k places from the tail of the linked list. in details:
-1. Initialize a variable 'current' to the head of the linked list and an empty list 'list' to store each node's value.
+The first part of the code is checking if the entered index k is a valid index in the linked list. If k is greater than the length of the linked list, an exception is raised. If k is equal to the length of the linked list, another exception is raised since there is no node with that index. If k is negative, an exception is also raised since it's an invalid index.
 
-2. Traverse the linked list using a while loop until the current node is not None. 
-    *  Append the value of the current node to the list.
-    * Set the current node to the next node in the linked list.
 
-3. Append the value of the last node in the linked list to the list.
-   
-4. Reverse the list using the slicing notation list[::-1], and store it in a new list called 'rev_list'.
+If k is a valid index, the code proceeds to find the node at the index k from the end of the linked list. The method starts by initializing a current variable to the head of the linked list, a node index variable to length - k - 1, and a current index variable to 0. It then iterates through the linked list using a while loop until it reaches the end of the list. In each iteration, it checks if node_idx is equal to current_idx. If they are equal, the method returns the current.value. Otherwise, it moves on to the next node by setting current to current.next and increments current_idx by 1.
 
-5. Check if the given index 'k' is out of range or negative using if statements. If it is, raise an exception.
-
-6. Iterate through the reversed list using a for loop, and for each element in the list, do the following:
-    * Get the index of the element in the reversed list using the index() method.
-     * If the index is equal to the given index 'k', return the value of the element.
-     * If the index is in the middle of the reversed list (i.e., len(rev_list)//2), return "Happy Path".
-
-7. If the given index 'k' is not found in the reversed list, it means it is out of range, so raise an exception.
+if there is just one element in the linked list  the current.next will be None  in that time return the first and only element
 
 ## Solution 
 
