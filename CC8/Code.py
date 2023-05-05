@@ -45,7 +45,10 @@ class Linked_List:
             
            output += "null"  
          return output
-     
+
+     """
+     this method will zip two lists to one list : by taking a value from list1 and another one from list2 and add it to zip list repeatdly
+     """
      def zipLists(self,list1, list2):
          pointer1 = list1.head
          pointer2 = list2.head
