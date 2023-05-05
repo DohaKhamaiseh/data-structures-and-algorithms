@@ -4,6 +4,7 @@ class Queue:
         self.front = None
         # rear = None
         self.back = None
+        self.size=0
     
     def enqueue(self,value):
       node = Node(value)
@@ -16,6 +17,7 @@ class Queue:
       else:
          self.back.next = node
          self.back=node
+      self.size+=1
 
     def dequeue(self):
       # to check if the Queue is empty
@@ -30,7 +32,8 @@ class Queue:
       temp = self.front
       self.front = self.front.next 
       temp.next = None
-
+      
+      self.size-=1
       return temp.value
     
     def peek(self):
@@ -53,6 +56,9 @@ class Queue:
           output+=str(temp.value)+"|"
           temp=temp.next
        return output
+    
+    def get_size(self):
+       return self.size
 
          
     
