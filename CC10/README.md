@@ -2,12 +2,21 @@
 
 ## Whiteboard Process
 ### Stack
-![Push](./CC7.PNG)
-![Pop](./CC7.PNG)
+**Push**
+
+![Push](./CC10_push.PNG)
+**Pop**
+
+![Pop](./CC10_POP.PNG)
 
 ### Queue
-![Enqueue](./CC7.PNG)
-![Dequeue](./CC7.PNG)
+**Enqueue**
+
+![Enqueue](./CC10_enqueue.PNG)
+
+**Dequeue**
+
+![Dequeue](./CC10_dequeue.PNG)
 
 ## Approach & Efficiency
 *The Node class is used to create individual nodes of a Stack or Queue, where each node contains a value and a reference to the next node.*
