@@ -73,4 +73,4 @@ peek() ----> value = 4
 isEmpty() ----> False
 
 
-[Pull Request Link](https://github.com/DohaKhamaiseh/data-structures-and-algorithms/pull/17)
+[Pull Request Link](https://github.com/DohaKhamaiseh/data-structures-and-algorithms/pull/20)
