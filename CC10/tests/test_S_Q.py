@@ -44,7 +44,16 @@ def test_pop_multiple_values_stack():
     actual = stackk.show_nodes()
     assert expected == actual
     
-# def case5
+def test_peek_next_item_stack():
+    stackk = Stack()
+    stackk.push(2)
+    stackk.push(4)
+    stackk.push(8)
+
+    stackk.pop()
+    expected = 4
+    actual = stackk.peek()
+    assert expected == actual
 
 def test_instantiate_empty_stack():
     stackk = Stack()
