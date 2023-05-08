@@ -1,4 +1,4 @@
-# Linked List Kth
+# Pseudo Queue
 
 ## Whiteboard Process
 
