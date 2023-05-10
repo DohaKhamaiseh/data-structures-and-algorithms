@@ -32,4 +32,4 @@ queue = dog|dog|dog|cat
 dequeue(dog) ----> queue=dog|dog|cat
 dequeue(cat) ----> queue=dog|dog|
 
-[Pull Request Link](https://github.com/DohaKhamaiseh/data-structures-and-algorithms/pull/20)
+[Pull Request Link](https://github.com/DohaKhamaiseh/data-structures-and-algorithms/pull/25)
