@@ -6,36 +6,15 @@ def validate_brackets(str):
     """
 
     stack = Stack()
-    # Round Brackets : ()
-    # Square Brackets : []
-    # Curly Brackets : {}
+    for i in range(len(str)):     #(){}[]     ((){}[])
 
-    # Curly = None
-    # Square = None
-    # Round = None
-
-    # Curly = re.search("\{[a-zA-Z]?\}",str)
-    # Square = re.search("\[[a-zA-Z]?\]",str)
-    # Round = re.search("\([a-zA-Z]?\)",str)
-
-     
-
-    # if (Curly or Square or Round ):
-    #          if((str.count("{") + str.count("}"))%2==0) and((str.count("(") + str.count(")"))%2==0) and ((str.count("[") + str.count("]"))%2==0) :
-    #            return True
-    #          else :
-    #           return False
-    # else:
-    #     return False
-   
-    for i in range(len(str)):
          if(str[i] == "(" ):
-             stack.push(")")
+             stack.push(")")  #stack = )
 
-         if(str[i]==")"):
+         if(str[i]==")"):   # ({)} or ([)]
                  if((stack.top.value=="}" or stack.top.value=="]")  and stack.get_size()!=0):
                       return False
-                 stack.pop()
+                 stack.pop() #stack = empty
 
          if(str[i] == "{" ):
             stack.push("}")
