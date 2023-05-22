@@ -4,6 +4,8 @@
 
 ![Brackets](./CC15.PNG)
 
+![Max](./CC16.PNG)
+
 ## Approach & Efficiency
 *The **Node** class is used to create individual nodes of a Tree, where each node contains a value and a reference to the right and left nodes.*
 
@@ -14,6 +16,9 @@
 **in_order(self,root):** this method will traverse the tree in this way : left >>> root >>> right
 
 **post_order(self,root):** this method will traverse the tree in this way : left >>> right >>> root
+
+**getMax(self):** this method will return the maximum value in the tree
+
 
 *The **BST** class is used to add nodes to the tree but in binary search way which  will put the value that bigger than the root on the right and the smaller on the left . It has multiple methods :*
 
@@ -36,10 +41,12 @@
     contains(10) ---> True
     contains(3) ---> False
 
+    getMax() ---> 15
+
 ```
 
 
 
 <br/>
 
-[Pull Request Link](https://github.com/DohaKhamaiseh/data-structures-and-algorithms/pull/28)
+[Pull Request Link]()

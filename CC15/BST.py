@@ -64,46 +64,47 @@ class BST(BinaryTree) :
 
 
 
-# tree_test = Tree()
+tree_test = BinaryTree()
 
 
-# Node1 = Node("1")
-# tree_test.root = Node1
+Node1 = Node(10)
+tree_test.root = Node1
 
-# Node2 = Node("2")
-# tree_test.root.left = Node2
+Node2 = Node(5)
+tree_test.root.left = Node2
 
-# Node3 = Node("3")
-# tree_test.root.right = Node3
+Node3 = Node(15)
+tree_test.root.right = Node3
 
-# Node4 = Node("4")
+# Node4 = Node(4)
 # tree_test.root.left.left = Node4
 
-# Node5 = Node("5")
+# Node5 = Node(5)
 # tree_test.root.left.right = Node5
 
-# Node6 = Node("6")
+# Node6 = Node(6)
 # tree_test.root.right.left = Node6
 
-# print(tree_test.pre_order(tree_test.root))
-# print(tree_test.in_order(tree_test.root))
-# print(tree_test.post_order(tree_test.root))
+print(tree_test.pre_order(tree_test.root))
+print(tree_test.in_order(tree_test.root))
+print(tree_test.post_order(tree_test.root))
 
 
-BST_test = BST()
-BST_test.Add(10)
-BST_test.Add(5)
-BST_test.Add(15)
-BST_test.Add(20)
-BST_test.Add(12)
-BST_test.Add(6)
-BST_test.Add(3)
+# BST_test = BST()
+# BST_test.Add(10)
+# BST_test.Add(5)
+# BST_test.Add(15)
+# BST_test.Add(20)
+# BST_test.Add(12)
+# BST_test.Add(6)
+# BST_test.Add(3)
 
-print(BST_test.pre_order(BST_test.root))
-print(BST_test.in_order(BST_test.root))
-print(BST_test.post_order(BST_test.root))
+# print(BST_test.pre_order(BST_test.root))
+# print(BST_test.in_order(BST_test.root))
+# print(BST_test.post_order(BST_test.root))
 
-print(BST_test.contains(5))
+# print(BST_test.contains(5))
+print(tree_test.getMax())
 
 
 
