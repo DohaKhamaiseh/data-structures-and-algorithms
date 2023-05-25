@@ -52,6 +52,9 @@ class BinaryTree:
    
     
     def tree_breadth_first(self,root):
+      """
+      this method will traverse a tree using tree breadth first way (by levels)
+      """
       t = []
       listt = []
       if(root is None):
