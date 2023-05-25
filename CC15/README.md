@@ -19,6 +19,8 @@
 
 **getMax(self):** this method will return the maximum value in the tree
 
+**tree_breadth_first(self,root):** this method will traverse the tree nodes by levels (tree breadth first way)
+
 
 *The **BST** class is used to add nodes to the tree but in binary search way which  will put the value that bigger than the root on the right and the smaller on the left . It has multiple methods :*
 
@@ -43,10 +45,13 @@
 
     getMax() ---> 15
 
+    tree_breadth_first(root) ----> [2, 7, 5, 2, 6, 9, 5, 11, 4] 
+    tree_breadth_first(root) ----> [10,5,15]
+
 ```
 
 
 
 <br/>
 
-[Pull Request Link](https://github.com/DohaKhamaiseh/data-structures-and-algorithms/pull/30)
+[Pull Request Link]()
