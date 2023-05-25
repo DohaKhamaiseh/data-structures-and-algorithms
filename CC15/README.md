@@ -6,6 +6,8 @@
 
 ![Max](./CC16.PNG)
 
+![breadth](./CC17.PNG)
+
 ## Approach & Efficiency
 *The **Node** class is used to create individual nodes of a Tree, where each node contains a value and a reference to the right and left nodes.*
 
