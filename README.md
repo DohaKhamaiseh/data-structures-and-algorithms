@@ -15,4 +15,7 @@
 | CC#13 | [CC#12 Doc](./CC13/README.md) |
 | CC#14 | Interview |
 | CC#15 | [CC#15 Doc](./CC15/README.md) |
+| CC#26 | [CC#26 Doc](./sorting/insertion/README.md) 
+| CC#27 | [CC#27 Doc](./sorting/merge/README.md) |
+
 
