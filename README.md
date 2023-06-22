@@ -17,5 +17,6 @@
 | CC#15 | [CC#15 Doc](./CC15/README.md) |
 | CC#26 | [CC#26 Doc](./sorting/insertion/README.md) 
 | CC#27 | [CC#27 Doc](./sorting/merge/README.md) |
+| CC#28 | [CC#28 Doc](./CC28/README.md) |
 
 
