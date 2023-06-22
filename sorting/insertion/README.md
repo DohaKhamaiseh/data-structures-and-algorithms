@@ -53,4 +53,8 @@ In the fourth pass-through of the insert sorted, the value to be inserted (16) w
 In the second pass-through of the insert sorted, the value to be inserted (15) was bigger than the first value(4) on the sorted list so we incresed the counter(i) until the value become smaller than element on the sorted(16) so then we swapped between (15) and (16) then between (16) and (23) then between (23) and (42)
 
 
+### Big O : 
+#### Time Complexity: O(n^2)
+#### Space Complexity: O(n)
+
 [PR link](https://github.com/DohaKhamaiseh/data-structures-and-algorithms/pull/39)
