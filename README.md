@@ -18,5 +18,7 @@
 | CC#26 | [CC#26 Doc](./sorting/insertion/README.md) 
 | CC#27 | [CC#27 Doc](./sorting/merge/README.md) |
 | CC#28 | [CC#28 Doc](./CC28/README.md) |
+| CC#29 | Interview |
+| CC#30 | [CC#30 Doc](./CC30/README.md) |
 
 
