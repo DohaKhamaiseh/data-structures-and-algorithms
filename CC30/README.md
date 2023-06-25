@@ -27,3 +27,5 @@
 | hash   | O(1) | O(1)  |
 
 ## Code : [Hashtable](./hash.py)
+
+## Pull Request: [PR](https://github.com/DohaKhamaiseh/data-structures-and-algorithms/pull/49)
