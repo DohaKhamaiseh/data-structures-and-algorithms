@@ -21,5 +21,6 @@
 | CC#29 | Interview |
 | CC#30 | [CC#30 Doc](./CC30/README.md) |
 | CC#31 | [CC#31 Doc](./CC31/README.md) |
+| CC#32 | [CC#32 Doc](./CC32/README.md) |
 
 
