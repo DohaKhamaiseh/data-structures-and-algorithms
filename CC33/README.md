@@ -1,4 +1,4 @@
-# Tree Intersection
+# Left Join
 
 
 
@@ -16,7 +16,7 @@
 #### Space : O(n) 
 <br>
 
-## WhiteBoard : ![CC33](./cc33.PNG)
+## WhiteBoard : ![CC33](./cc33.jpg)
 
 
 <br>
