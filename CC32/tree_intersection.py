@@ -1,3 +1,5 @@
+from hash import hashtable
+
 class Node:
     def __init__(self, value):
         self.value = value
@@ -18,7 +20,10 @@ def tree_intersection(tree1, tree2):
     """
    A function to return the intersection between two Binary Tree
     """
-    d = set()
+    # d = set()
+    obj = hashtable(7)
+    count = 1
+    
     test = BinaryTree()
     tree1 = test.pre_order(tree1)
     tree2 = test.pre_order(tree2)
@@ -28,12 +33,15 @@ def tree_intersection(tree1, tree2):
     
     for node in tree1:
             if node in tree2:
-                d.add(node)
+                # d.add(node)
+                obj.set(count,node)
 
-    if len(d) ==0 : 
+            count+=1
+
+    if obj.size ==0 : 
      return "No intersection"
 
-    return d
+    return obj.values()
 
 
 ####################################################3
@@ -114,7 +122,7 @@ Node7_t2 = Node(200)
 tree2.root.right.left = Node7_t2
 
 ##########################################################3333
-tree_ts= BinaryTree()
-tree_ts2= BinaryTree()
-result = tree_intersection(tree_ts.root, tree_ts2.root)
+# tree_ts= BinaryTree()
+# tree_ts2= BinaryTree()
+result = tree_intersection(tree1.root, tree2.root)
 print(result)

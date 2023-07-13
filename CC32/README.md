@@ -17,7 +17,7 @@
 
 <br>
 
-## WhiteBoard : ![CC32](./CC32.PNG)
+## WhiteBoard : ![CC32](./cc32.PNG)
 
 
 <br>
