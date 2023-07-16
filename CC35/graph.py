@@ -1,4 +1,5 @@
-from node import Node
+from vertex import Vertex
+from Queue import Queue
 
 
 class Graph:
@@ -13,7 +14,7 @@ class Graph:
         """"
         A method to add a vertex to the adjacency list
         """
-        new_vertex = Node(value)
+        new_vertex = Vertex(value)
 
         self.adj_list[new_vertex] = []
         self.size+=1
@@ -59,10 +60,10 @@ class Graph:
         
         output = ""
         
-        for neighbor in self.adj_list[vertex]:
-            output += " " + neighbor.value + " --->"
+        # for neighbor in self.adj_list[vertex]:
+        #     output += " " + neighbor.value + " --->"
         
-        return output
+        return list(self.adj_list[vertex])
 
     def get_size(self):
         """
@@ -72,6 +73,35 @@ class Graph:
             return None
         
         return self.size
+    
+    def breadth_first(self, root_vertex):
+        """
+        A method to traverse the graph using breadth_first way which will traverse it level by level
+        """
+        nodes = []
+        breadth = Queue()
+        visited = set()
+
+        breadth.enqueue(root_vertex)
+        visited.add(root_vertex)
+
+        while not breadth.isEmpty():
+            front = breadth.dequeue()
+            nodes.append(front)
+
+            for child in self.get_neighbors(front):
+                if child not in visited:
+                    visited.add(child)
+                    breadth.enqueue(child)
+
+        output =""
+        for node in nodes :
+            output += " " + node.value
+
+        return output
+
+
+
     
     def __str__(self):
         """
@@ -84,6 +114,7 @@ class Graph:
                 output += f'{edge} -----> '
             output += '\n'
         return output
+    
 
 
 graph1 = Graph()
@@ -99,12 +130,14 @@ graph1.add_edge(c,b)
 graph1.add_edge(d,b)
 graph1.add_edge(d,c)
 
-# print(graph1)
+print(graph1)
 # print(graph1.get_size())
-# print(graph1.get_neighbors(a))
+print(graph1.get_neighbors(a))
 # print(a)
 
-print(graph1.get_vertices())
+# print(graph1.get_vertices())
+
+print(graph1.breadth_first(a))
         
 
 

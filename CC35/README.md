@@ -1,6 +1,8 @@
 # Graph
 
+## Whiteboard
 
+![breadth_first](./CC36.jpg)
 
 ## Approach & Efficiency
 
@@ -15,7 +17,9 @@
 
 **get_neighbors(self,vertex):**   A method to get all neighbors for the given vertex
 
-**get_size(self):**     A method to get the size of the adjacency list which is the total number of the vertices
+**get_size(self):**   A method to get the size of the adjacency list which is the total number of the vertices
+
+**breadth_first(self, root_vertex):**    A method to traverse the graph using breadth_first way which will traverse it level by level
 
 
 ## Complexity:
@@ -24,17 +28,12 @@
 |--------       |------|-------|
 | add_vertex    | O(1) | O(1)  |
 | add_edge      | O(1) | O(1)  |
-| get_vertices  | O(n) | O(1)  |
-| get_neighbors | O(n) | O(1)  |
+| get_vertices  | O(V) | O(1)  |
+| get_neighbors | O(1) | O(1)  |
 | get_size      | O(1) | O(1)  |
+| breadth_first | O(V + E) | O(V)  |  
+V ---> Vertices , E --> Edges
 
 
-
-<br>
-
-
-
-
-<br>
 
 ## Pull Request: [PR](https://github.com/DohaKhamaiseh/data-structures-and-algorithms/pull/63)
