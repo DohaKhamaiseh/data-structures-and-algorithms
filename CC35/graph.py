@@ -1,6 +1,10 @@
 from vertex import Vertex
 from Queue import Queue
 
+class Edge:
+    def __init__(self,vertex, weight=0):
+        self.vertex = vertex
+        self.weight = weight
 
 class Graph:
     """"
@@ -21,7 +25,7 @@ class Graph:
 
         return new_vertex
     
-    def add_edge(self,vertex1, vertex2):
+    def add_edge(self,vertex1, vertex2,weight=0):
 
         """"
         A method to add an edge between two vertices
@@ -34,8 +38,11 @@ class Graph:
             return("this vertex does not exist")
         
         
-        self.adj_list[vertex1].append(vertex2)
-        self.adj_list[vertex2].append(vertex1)
+        edge1_2 = Edge(vertex1,weight)
+        edge2_1 = Edge(vertex2,weight)
+
+        self.adj_list[vertex1].append(edge2_1)
+        self.adj_list[vertex2].append(edge1_2)
 
     def get_vertices(self):
       """
@@ -49,7 +56,7 @@ class Graph:
       for vertex in self.adj_list.keys():
             output += " " + vertex.value + " --->"
 
-      return output
+      return list(self.adj_list.keys())
     
     def get_neighbors(self,vertex):
         """
@@ -58,12 +65,12 @@ class Graph:
         if vertex not in self.adj_list.keys():
             return "The vertex not in the adjacency list"
         
-        output = ""
+        lis = []
         
-        # for neighbor in self.adj_list[vertex]:
-        #     output += " " + neighbor.value + " --->"
+        for neighbor in self.adj_list[vertex]:
+            lis.append(neighbor)
         
-        return list(self.adj_list[vertex])
+        return lis
 
     def get_size(self):
         """
@@ -89,7 +96,8 @@ class Graph:
             front = breadth.dequeue()
             nodes.append(front)
 
-            for child in self.get_neighbors(front):
+            for edge in self.get_neighbors(front):
+                child = edge.vertex
                 if child not in visited:
                     visited.add(child)
                     breadth.enqueue(child)
@@ -99,6 +107,7 @@ class Graph:
             output += " " + node.value
 
         return output
+    
 
 
 
@@ -111,33 +120,78 @@ class Graph:
         for vertex in self.adj_list.keys():
             output += f'{vertex} -> '
             for edge in self.adj_list[vertex]:
-                output += f'{edge} -----> '
+                output += f'{edge.vertex} -----> '
             output += '\n'
         return output
+
+def business_trip(graph, cities):
+            """"
+            A function to calculate the total cost for a trip(graph) passing by cities(vertices)
+            """
+            cost = 0
+            for i in range(len(cities) - 1):
+                curr = cities[i]
+                nxt = cities[i + 1]
+
+            
+
+                for vertex in graph.get_vertices() : 
+                    if vertex.value == curr:
+
+                
+                        for edge in graph.adj_list[vertex]:
+                            if edge.vertex.value == nxt:
+                                cost += edge.weight
+                                break
+
+            if cost == 0  :
+                return None
+            
+            return "$" + str(cost)
     
 
 
 graph1 = Graph()
 
-a = graph1.add_vertex("A")
-b = graph1.add_vertex("B")
-c = graph1.add_vertex("C")
-d = graph1.add_vertex("D")
+# a = graph1.add_vertex("A")
+# b = graph1.add_vertex("B")
+# c = graph1.add_vertex("C")
+# d = graph1.add_vertex("D")
 
-graph1.add_edge(a,b)
-graph1.add_edge(a,c)
-graph1.add_edge(c,b)
-graph1.add_edge(d,b)
-graph1.add_edge(d,c)
+# graph1.add_edge(a,b)
+# graph1.add_edge(a,c)
+# graph1.add_edge(c,b)
+# graph1.add_edge(d,b)
+# graph1.add_edge(d,c)
 
-print(graph1)
+a = graph1.add_vertex("Pandora")
+b = graph1.add_vertex("Arendelle")
+c = graph1.add_vertex("Metroville")
+d = graph1.add_vertex("Monstropolis")
+e = graph1.add_vertex("Narnia")
+f = graph1.add_vertex("Naboo")
+
+graph1.add_edge(a,b,150)
+graph1.add_edge(a,c,82)
+graph1.add_edge(b,c,99)
+graph1.add_edge(b,d,42)
+graph1.add_edge(c,d,105)
+graph1.add_edge(c,e,37)
+graph1.add_edge(d,f,73)
+graph1.add_edge(c,f,26)
+graph1.add_edge(e,f,250)
+
+
+# print(graph1)
 # print(graph1.get_size())
-print(graph1.get_neighbors(a))
+# print(graph1.get_neighbors(a))
 # print(a)
 
 # print(graph1.get_vertices())
 
-print(graph1.breadth_first(a))
+# print(graph1.breadth_first(a))
+
+print(business_trip(graph1,["Arendelle","Monstropolis", "Naboo"]))
         
 
 

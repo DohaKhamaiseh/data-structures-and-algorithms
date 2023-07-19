@@ -4,6 +4,8 @@
 
 ![breadth_first](./CC36.jpg)
 
+![business_trip](./CC37.jpg)
+
 ## Approach & Efficiency
 
 
@@ -22,6 +24,9 @@
 **breadth_first(self, root_vertex):**    A method to traverse the graph using breadth_first way which will traverse it level by level
 
 
+**business_trip(graph, cities):**   A function to calculate the total cost for a trip(graph) passing by cities(vertices)
+
+
 ## Complexity:
 
 | Method        | Time | Space |
@@ -32,7 +37,8 @@
 | get_neighbors | O(1) | O(1)  |
 | get_size      | O(1) | O(1)  |
 | breadth_first | O(V + E) | O(V)  |  
-V ---> Vertices , E --> Edges
+| business_trip | O(N * V) | O(1)  |
+V ---> Vertices , E --> Edges , N ---> # of cities
 
 
 
