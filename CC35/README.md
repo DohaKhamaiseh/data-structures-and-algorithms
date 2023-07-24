@@ -46,4 +46,4 @@ V ---> Vertices , E --> Edges , N ---> # of cities
 
 
 
-## Pull Request: [PR](https://github.com/DohaKhamaiseh/data-structures-and-algorithms/pull/67)
+## Pull Request: [PR](https://github.com/DohaKhamaiseh/data-structures-and-algorithms/pull/69)
