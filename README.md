@@ -27,5 +27,5 @@
 | CC#35 | [CC#35 Doc](./CC35/README.md) |
 | CC#36 | [CC#36 Doc](./CC35/CC36.jpg) |
 | CC#37 | [CC#37 Doc](./CC35/CC37.jpg) |
-| CC#38 | [CC#38 Doc](./CC35/CC38.jpg) |
+| CC#38 | [CC#38 Doc](./CC35/CC38.png) |
 
