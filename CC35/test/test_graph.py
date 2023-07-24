@@ -172,3 +172,65 @@ def test_business_trip():
     actual = business_trip(g,["Arendelle","Monstropolis", "Naboo"])
     
     assert expected == actual
+
+
+def test_Depth_first_none():
+
+    g = Graph()
+
+    a = g.add_vertex("A")
+    b = g.add_vertex("B")
+    c = g.add_vertex("C")
+    d = g.add_vertex("D")
+
+   
+
+    expected = ' A'
+    actual = g.Depth_first(a) 
+
+    assert expected == actual
+
+def test_Depth_first_1():
+    g = Graph()
+
+    a = g.add_vertex("A")
+    b = g.add_vertex("B")
+    c = g.add_vertex("C")
+    d = g.add_vertex("D")
+    
+    g.add_edge(a,b,150)
+   
+
+    expected = ' A B'
+    actual = g.Depth_first(a) 
+
+    assert expected == actual
+
+def test_Depth_first_2():
+    graph = Graph()
+
+    a = graph.add_vertex("A")
+    b = graph.add_vertex("B")
+    c = graph.add_vertex("C")
+    d = graph.add_vertex("D")
+    e = graph.add_vertex("E")
+    f = graph.add_vertex("F")
+    g = graph.add_vertex("G")
+    h = graph.add_vertex("H")
+
+    graph.add_edge(a,b)
+    graph.add_edge(a,d)
+    graph.add_edge(b,d)
+    graph.add_edge(b,c)
+    graph.add_edge(c,g)
+    graph.add_edge(d,e)
+    graph.add_edge(d,h)
+    graph.add_edge(d,f)
+    graph.add_edge(h,f)
+   
+
+    expected = ' A B C G D E H F'
+    actual = graph.Depth_first(a) 
+
+    assert expected == actual
+

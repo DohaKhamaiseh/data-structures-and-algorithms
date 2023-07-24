@@ -1,5 +1,6 @@
 from vertex import Vertex
 from Queue import Queue
+from Stack import Stack
 
 class Edge:
     def __init__(self,vertex, weight=0):
@@ -108,8 +109,37 @@ class Graph:
 
         return output
     
+    def Depth_first(self,root_vertex):
+
+        """
+        A method to traverse the graph using Depth_first way which will traverse it by depth of each vertex
+        """
+
+        nodes = []
+        DF = Stack()
+        visited = set()
 
 
+        DF.push(root_vertex)
+        visited.add(root_vertex)
+
+        while not DF.isEmpty():
+            top = DF.pop()
+            nodes.append(top)
+
+
+            for edge in  reversed(self.get_neighbors(top)):
+                child = edge.vertex
+                if child not in visited:
+                    visited.add(child)
+                    DF.push(child)
+    
+        output =""
+        for node in nodes :
+            output += " " + node.value
+
+    
+        return output
 
     
     def __str__(self):
@@ -153,45 +183,58 @@ def business_trip(graph, cities):
 
 graph1 = Graph()
 
-# a = graph1.add_vertex("A")
-# b = graph1.add_vertex("B")
-# c = graph1.add_vertex("C")
-# d = graph1.add_vertex("D")
+a = graph1.add_vertex("A")
+b = graph1.add_vertex("B")
+c = graph1.add_vertex("C")
+d = graph1.add_vertex("D")
+e = graph1.add_vertex("E")
+f = graph1.add_vertex("F")
+g = graph1.add_vertex("G")
+h = graph1.add_vertex("H")
 
-# graph1.add_edge(a,b)
-# graph1.add_edge(a,c)
-# graph1.add_edge(c,b)
-# graph1.add_edge(d,b)
-# graph1.add_edge(d,c)
+graph1.add_edge(a,b)
+graph1.add_edge(a,d)
+graph1.add_edge(b,d)
+graph1.add_edge(b,c)
+graph1.add_edge(c,g)
+graph1.add_edge(d,e)
+graph1.add_edge(d,h)
+# graph1.add_edge(d,f)
+# graph1.add_edge(h,f)
 
-a = graph1.add_vertex("Pandora")
-b = graph1.add_vertex("Arendelle")
-c = graph1.add_vertex("Metroville")
-d = graph1.add_vertex("Monstropolis")
-e = graph1.add_vertex("Narnia")
-f = graph1.add_vertex("Naboo")
 
-graph1.add_edge(a,b,150)
-graph1.add_edge(a,c,82)
-graph1.add_edge(b,c,99)
-graph1.add_edge(b,d,42)
-graph1.add_edge(c,d,105)
-graph1.add_edge(c,e,37)
-graph1.add_edge(d,f,73)
-graph1.add_edge(c,f,26)
-graph1.add_edge(e,f,250)
+# a = graph1.add_vertex("Pandora")
+# b = graph1.add_vertex("Arendelle")
+# c = graph1.add_vertex("Metroville")
+# d = graph1.add_vertex("Monstropolis")
+# e = graph1.add_vertex("Narnia")
+# f = graph1.add_vertex("Naboo")
+
+# graph1.add_edge(a,b,150)
+# graph1.add_edge(a,c,82)
+# graph1.add_edge(b,c,99)
+# graph1.add_edge(b,d,42)
+# graph1.add_edge(c,d,105)
+# graph1.add_edge(c,e,37)
+# graph1.add_edge(d,f,73)
+# graph1.add_edge(c,f,26)
+# graph1.add_edge(e,f,250)
 
 
 # print(graph1)
 # print(graph1.get_size())
-# print(graph1.get_neighbors(a))
+# for ch in graph1.get_neighbors(d):
+
+#    print(ch.vertex.value)
 # print(a)
 
 # print(graph1.get_vertices())
 
 # print(graph1.breadth_first(a))
 
-print(business_trip(graph1,["Arendelle","Monstropolis", "Naboo"]))
+print(graph1.Depth_first(a))
+
+# print(business_trip(graph1,["Arendelle","Monstropolis", "Naboo"]))
         
 
 
