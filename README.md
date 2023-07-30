@@ -12,7 +12,7 @@
 | CC#10 | [CC#10 Doc](./CC10/README.md) |
 | CC#11 | [CC#11 Doc](./CC11/README.md) |
 | CC#12 | [CC#12 Doc](./CC12/README.md) |
-| CC#13 | [CC#12 Doc](./CC13/README.md) |
+| CC#13 | [CC#13 Doc](./CC13/README.md) |
 | CC#14 | Interview |
 | CC#15 | [CC#15 Doc](./CC15/README.md) |
 | CC#26 | [CC#26 Doc](./sorting/insertion/README.md) 
